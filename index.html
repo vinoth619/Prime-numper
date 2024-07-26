@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find the Prime Numper</h1>
+    <input type="text" id="in">
+    <button onclick="send()">check</button>
+    <h1 id="val"></h1>
+    <h1 id="send1"></h1>
+    
+    <script>
+        var inpu= document.getElementById("in")
+        var val=document.getElementById("val")
+        var send1=document.getElementById("send1")
+        function send(){
+            var fn=true;
+            for(var i=2; i<=Number(inpu.value);i++){
+                var fn=true;
+            for(var j=2; j<=i;j++){
+                if(i%j==0 &&i!==j){
+                    fn=false;
+                    val.innerHTML=inpu.value
+                    send1.innerHTML="NOT PRIME"
+                    break;
+                }
+                if(fn==true){
+                    val.innerHTML=inpu.value
+
+                    send1.innerHTML="PRIME"
+
+                }
+            }
+
+            
+            }
+        }
+        
+        
+    </script>
+
+    
+</body>
+</html>
